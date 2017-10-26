@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin: 0; padding: 0;box-sizing:border-box;font: 17px/50px Helvetica, Verdana, sans-serif;}
+	a{text-decoration: none;}
+	a:hover{text-decoration: underline;}
+	.wrap{
+		width: 650px;
+		margin: 270px auto;
+	}	
+		/*第一个模块*/
+		.downLoad{
+			position: relative;
+			width: 200px;
+			height: 50px;
+			border-radius: 15px;
+			background-color: #00AEDC;
+			text-align: center;
+			line-height: 50px;
+			margin: 0 auto;
+		}
+		.downLoad .up,.down{
+			position: absolute;
+			left: 10px;
+			right: 10px;
+			width: 180px;
+			height: 40px;
+			color: white;
+			background-color: #222222;
+			font-size: 15px;
+			text-align: center;
+			line-height: 40px;
+			z-index: -1;
+			transition: .3s linear;
+
+		}
+		.downLoad .up{			
+			top: 1px;
+			border-top-left-radius: 15px;
+			border-top-right-radius: 15px;
+		
+		}
+		.downLoad .down{
+			bottom: 1px;
+			border-bottom-left-radius: 15px;
+			border-bottom-right-radius: 15px;		
+		}
+		.downLoad a{
+			color: white;
+			font-size: 20px;
+			transform: all .5s;
+		}
+		.downLoad a:hover{
+			color: #0088CC;
+		}
+		.downLoad:hover .up{
+			
+			top: -38px;
+		}
+		.downLoad:hover .down{
+			bottom: -36px;
+		}
+
+		/*第二个*/
+		.my-box{
+			width: 190px;
+			height: 55px;
+			background-color: #1C1C1C;
+			text-align: center;
+			line-height: 55px;
+			margin: 40px  auto;
+		}	
+		.my-box a{
+			color: #0088CC;
+		}
+		.my-box:hover{
+			box-shadow: -5px -5px 15px #8ED1FE, 5px 5px 15px #8ED1FE, 5px -5px 15px #8ED1FE,-5px 5px 15px #8ED1FE;
+		}
+		.my-box:hover a{opacity: .8}
+
+		/*第三个*/
+		.HAC{
+			display: flex;
+			justify-content: space-around;
+		}
+		.Home,.About,.Contact{
+			position: relative;
+			width: 200px;
+			height: 100px;
+			background-color: red;
+			text-align: center;
+			line-height: 100px;
+			font-size: 50px;
+			color: white;
+		}
+		.Home:before,.About:before,.Contact:before{
+			content: "";
+			position: absolute;
+			height: .1px;
+			width: 100%;
+		    left: 0;bottom: 0;
+			background-color: black;
+			color: white;
+			transition:all .3s linear ;	
+		}
+		.Home:hover:before{
+			height: 100%;
+			content: "see us"
+		}.About:hover:before{
+			height: 100%;
+			content: "meetus"
+		}.Contact:hover:before{
+			height: 100%;
+			content: "Email us"
+		}
+		/*第四个*/
+		.five{margin-top: 20px;}
+		.five ul{
+			height: 220px;
+			display: flex;
+			flex-flow: column;
+			list-style: none;
+			justify-content:space-around;
+			align-items: center;
+		}
+		.five ul li{
+			position: relative;
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background-color: #CC3300;
+			text-align: center;
+			line-height: 40px;
+			font-size: 15px;
+			text-indent: 10px;	
+		}
+		.five ul li:before{
+			content: "";
+			position: absolute;
+			height: 40px;
+			width: .1px;
+			z-index: -1;
+			transition: all .3s linear;
+		}
+		.five ul li:hover:before{
+			width: 120px;
+			left: 20px;
+		}
+		.five ul li:nth-child(1):hover:before{
+			content: "Home";
+			background-color: #A57B15;
+		}
+		.five ul li:nth-child(2):hover:before{
+			content: "About";
+			background-color: #A57B15;
+		}
+		.five ul li:nth-child(3):hover:before{
+			content: "Service";
+			background-color: #A57B15;
+		}
+		.five ul li:nth-child(4):hover:before{
+			content: "Portfolio";
+			background-color: #A57B15;
+		}
+		.five ul li:nth-child(5):hover:before{
+			content: "Contact us";
+			background-color: #A57B15;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="downLoad">
+			<a href="#">DOWNLOAD</a>
+			<div class="up">click to begin</div>
+			<div class="down">1.2M.zip</div>
+		</div>	
+		<div class="my-box"><a href="#">my box with glow</a></div>
+		<div class="HAC">
+			<div class="Home">Home</div>
+			<div class="About">About</div>
+			<div class="Contact">Contact</div>
+		</div>
+		<div class="five">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
